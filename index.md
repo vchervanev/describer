@@ -4,4 +4,6 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 # layout: home
 ---
-AAA
+{% for item in site.items %}
+* [{{item.title}}]({{item.url}})
+{% endfor %}

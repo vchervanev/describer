@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% for section in page.data %}
+<b>{{section[0]}}:</b>
+<ul>
+    {% for pair in section[1] %}
+        <li>{{pair[0]}}: {{ pair[1] }}</li>
+    {% endfor %}
+</ul>
+<hr>
+{% endfor %}
+
+<ul>
+{% for link in page.links %}
+    {% assign page = site.items | where: "slug", link[0] | first %}
+
+    <li><a href={{ page.url }}>{{ page.title }}</a>: {{ link[1] }}</li>
+{% endfor %}
+</ul>
