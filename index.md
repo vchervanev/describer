@@ -5,5 +5,5 @@
 # layout: home
 ---
 {% for item in site.items %}
-* [{{item.title}}]({{item.url}})
+* [{{item.title}}](describer{{item.url}})
 {% endfor %}
