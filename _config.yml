@@ -1,3 +1,4 @@
+baseurl: describer  
 markdown: kramdown
 # theme: minima
 # plugins:
